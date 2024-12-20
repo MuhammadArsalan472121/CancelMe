@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f8d7e6; /* Light pink background */
+            color: #5f4b8b; /* Dark purple text */
+        }
+        #message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3e3b6e; /* Darker shade for the message */
+        }
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 15px; /* Round buttons */
+            border: 2px solid #5f4b8b; /* Purple border */
+            background-color: #ffffff; /* White background */
+            color: #5f4b8b; /* Dark purple text */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: #5f4b8b;
+            color: #ffffff; /* White text when hovered */
+        }
+        #no-btn {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function displayContactMessage() {
+            alert("Contact me on WhatsApp: +92 340 5866007 💖");
+        }
+
+        function moveButtonAway(event) {
+            const noButton = document.getElementById("no-btn");
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+</head>
+<body>
+    <div id="message">Mere saath kal ghoomne chalo gee?</div>
+    <button onclick="displayContactMessage()">Yes</button>
+    <button id="no-btn" onmouseover="moveButtonAway(event)">No</button>
+</body>
+</html>
